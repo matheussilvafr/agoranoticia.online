@@ -28,38 +28,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 		padding: 0 !important;
 	}
 </style>
-<style id='wp-block-template-skip-link-inline-css'>
 
-		.skip-link.screen-reader-text {
-			border: 0;
-			clip: rect(1px,1px,1px,1px);
-			clip-path: inset(50%);
-			height: 1px;
-			margin: -1px;
-			overflow: hidden;
-			padding: 0;
-			position: absolute !important;
-			width: 1px;
-			word-wrap: normal !important;
-		}
-
-		.skip-link.screen-reader-text:focus {
-			background-color: #eee;
-			clip: auto !important;
-			clip-path: none;
-			color: #444;
-			display: block;
-			font-size: 1em;
-			height: auto;
-			left: 5px;
-			line-height: normal;
-			padding: 15px 23px 14px;
-			text-decoration: none;
-			top: 5px;
-			width: auto;
-			z-index: 100000;
-		}
-</style>
 <link rel='stylesheet' id='elementor-frontend-css' href='https://smartfit-planos.site/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.18.3' media='all' />
 <link rel='stylesheet' id='swiper-css' href='https://smartfit-planos.site/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' media='all' />
 <link rel='stylesheet' id='elementor-post-8-css' href='https://smartfit-planos.site/wp-content/uploads/elementor/css/post-8.css?ver=1705006428' media='all' />
@@ -412,47 +381,7 @@ Preço estabelecido: R$ 299,90 (Por ano)</h2>		</div>
 		</section>
 							</div>
 		<link rel='stylesheet' id='e-animations-css' href='https://smartfit-planos.site/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.18.3' media='all' />
-<script id="wp-block-template-skip-link-js-after">
-	( function() {
-		var skipLinkTarget = document.querySelector( 'main' ),
-			sibling,
-			skipLinkTargetID,
-			skipLink;
 
-		// Early exit if a skip-link target can't be located.
-		if ( ! skipLinkTarget ) {
-			return;
-		}
-
-		/*
-		 * Get the site wrapper.
-		 * The skip-link will be injected in the beginning of it.
-		 */
-		sibling = document.querySelector( '.wp-site-blocks' );
-
-		// Early exit if the root element was not found.
-		if ( ! sibling ) {
-			return;
-		}
-
-		// Get the skip-link target's ID, and generate one if it doesn't exist.
-		skipLinkTargetID = skipLinkTarget.id;
-		if ( ! skipLinkTargetID ) {
-			skipLinkTargetID = 'wp--skip-link--target';
-			skipLinkTarget.id = skipLinkTargetID;
-		}
-
-		// Create the skip link.
-		skipLink = document.createElement( 'a' );
-		skipLink.classList.add( 'skip-link', 'screen-reader-text' );
-		skipLink.href = '#' + skipLinkTargetID;
-		skipLink.innerHTML = 'Pular para o conteúdo';
-
-		// Inject the skip link.
-		sibling.parentElement.insertBefore( skipLink, sibling );
-	}() );
-	
-</script>
 <script src="https://smartfit-planos.site/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.7.3" id="elementor-pro-webpack-runtime-js"></script>
 <script src="https://smartfit-planos.site/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.18.3" id="elementor-webpack-runtime-js"></script>
 <script src="https://smartfit-planos.site/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
