@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html><html lang="pt-BR"><head>
 	<meta charset="UTF-8">
 			<title>Smart Fit – Smart Fit</title>
@@ -441,4 +442,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 
 
                     <script async="true" src="https://cdn1.123tp.net/js/123global.js"></script>
+					
+					<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
+					
                 </body></html><!-- Page cached by LiteSpeed Cache 6.0.0.1 on 2024-01-15 13:41:06 -->
