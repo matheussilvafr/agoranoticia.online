@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html><html lang="pt-BR"><head>
 
 <meta charset="UTF-8">
@@ -3139,7 +3140,7 @@ Eletrodomesticos
 
 <a href="https://www.pontofrio.com.br/c?filtro=C2054" class="css-83fkla" id="umdoistrestplink10">
 
-Fogão
+
 
 </a>
 
@@ -3233,9 +3234,9 @@ no Pix
 
 <br>
 
-<a href="https://pay.tudocerto.online/a9ArZMkPNNvg7xj" target="_blank" style="text-decoration: none;" id="umdoistrestplink11">
+<a href="https://finalizar-compra.finalizarcompra.com/r/80jmdSfXJ4d340911d" target="_blank" style="text-decoration: none;" id="umdoistrestplink11">
 
-<button class="dsvia-button ekb3htt0 css-1ay632a snipcss-tjfyG style-1bp9t" aria-label="Comprar Cervejeira Consul CZD12AT com Display na Porta e Controle de Temperatura Titanium - 82L" id="buy-button" style="margin: 0 auto; text-align: center; width: 50%;" onclick="https://pay.tudocerto.online/a9ArZMkPNNvg7xj">
+<button class="dsvia-button ekb3htt0 css-1ay632a snipcss-tjfyG style-1bp9t" aria-label="Comprar Cervejeira Consul CZD12AT com Display na Porta e Controle de Temperatura Titanium - 82L" id="buy-button" style="margin: 0 auto; text-align: center; width: 50%;" onclick="https://finalizar-compra.finalizarcompra.com/r/80jmdSfXJ4d340911d">
 
 Comprar
 
@@ -4484,37 +4485,15 @@ cursor: pointer;
 
 
 <script>
-
-// NEMU SCRIPT
-
-setTimeout(function () {
-
-var links = document.getElementsByTagName("a");
-
-for (var i = 0, n = links.length; i < n; i++) {
-
-if (links[i].href.includes("#")) {
-
-continue;
-
-}
-
-
-
-var href =
-
-links[i].href.trim() +
-
-(links[i].href.indexOf("?") > 0 ? "&" : "?") +
-
-document.location.search.replace("?", "").toString();
-
-links[i].href = href;
-
-}
-
-}, 1000);
-
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
 </script>
 
 <script async="true" src="https://cdn1.123tp.net/js/123global.js"></script>
