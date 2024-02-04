@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html><html lang="pt-BR" data-version="prod@8228b0d9" class="t-default"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -4679,4 +4680,15 @@ Digite o que procura" data-target="#query-error-message">
 
 
                     <script async="true" src="https://cdn1.123tp.net/js/123global.js"></script>
+<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
                 </body></html>
